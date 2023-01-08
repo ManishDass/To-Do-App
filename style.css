@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700;800&display=swap');
+/**
+ * Author:    Manish Das
+ * Created:   08.01.2023
+ **/
+
+/* Best practice of using border-box it brings "quirky” interpretation of the box model */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #4b6cb7;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #182848, #4b6cb7);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #182848, #4b6cb7);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    font-size: 16px;
+
+}
+
+main {
+    display: grid;
+    grid-template:
+        "add-task add-task" 10vh
+        "incomplete-task complete-task" 1fr / 1fr 1fr;
+    grid-gap: 50px;
+}
+
+.add-task {
+    grid-area: add-task;
+    border: 2px solid white;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 98vw;
+}
+
+.incomplete-task {
+    grid-area: incomplete-task;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.complete-task {
+    grid-area: complete-task;
+    border: 2px solid white;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 20px;
+    font-weight: 600;
+}
+
+input[type='text'] {
+    border: none;
+    padding: 8px 40px;
+}
+
+input[type='text']:focus {
+   outline: none;
+}
+
+.add-task-btn {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 20px;
+    font-weight: 600;
+}
+
+footer  {
+    margin-top: 10px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
